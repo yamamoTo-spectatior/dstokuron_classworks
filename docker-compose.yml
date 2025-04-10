@@ -1,0 +1,18 @@
+services:
+  # サービス名を'notebook'に指定
+  notebook:
+    # Dockerfileを指定（docker-compose.ymlと同ディレクトリ）
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # ポート番号を指定
+    ports:
+      - "8888:8888"
+    environment:
+      - JUPYTER_ENABLE_LAB=yes # Jupyter Labを有効化
+      - TZ=Asia/Tokyo # タイムゾーンを指定
+    # ホストとコンテナでデータ共有するためにworkフォルダをマウント
+    volumes:
+      - ./work/:/home/jovyan/work
+    # トークン認証を無効化
+    command: start-notebook.sh --NotebookApp.token=''
