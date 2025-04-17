@@ -12,7 +12,11 @@ vim
 #firefox \
 #firefox-locale-ja
 
-RUN pip install -r requirements.txt
+# requirements.txtをDockerコンテナ内の任意の場所にコピー
+COPY requirements.txt /tmp/requirements.txt
+
+# requirements.txtを使ってPythonパッケージをインストール
+RUN pip install -r /tmp/requirements.txt
 
 
 # ユーザーをjovyanに戻す
