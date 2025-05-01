@@ -8,6 +8,8 @@ USER root
 RUN echo "jovyan ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 RUN apt update && apt install -y \
 htop \
+graphviz \
+fonts-ipafont \
 vim
 #firefox \
 #firefox-locale-ja

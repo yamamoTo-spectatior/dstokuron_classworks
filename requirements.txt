@@ -4,3 +4,5 @@ get-gecko-driver
 atproto
 elasticsearch
 mlxtend  
+nltk
+janome
