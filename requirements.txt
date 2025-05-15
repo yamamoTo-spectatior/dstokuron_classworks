@@ -6,4 +6,5 @@ elasticsearch>=8,<9
 mlxtend  
 nltk
 janome
-autograd
+#autograd
+dragongrad
