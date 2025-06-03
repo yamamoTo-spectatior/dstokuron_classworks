@@ -10,6 +10,8 @@ RUN apt update && apt install -y \
 htop \
 graphviz \
 fonts-ipafont \
+libcairo2-dev \
+poppler-utils \
 vim
 #firefox \
 #firefox-locale-ja
