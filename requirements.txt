@@ -11,3 +11,5 @@ pymc
 numpyro
 blackjax
 nutpie
+gensim
+pyLDAvis
