@@ -13,3 +13,4 @@ blackjax
 nutpie
 gensim
 pyLDAvis
+wordcloud
