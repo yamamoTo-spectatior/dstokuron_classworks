@@ -21,6 +21,8 @@ COPY requirements.txt /tmp/requirements.txt
 
 # requirements.txtを使ってPythonパッケージをインストール
 RUN pip install -r /tmp/requirements.txt
+RUN pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+RUN pip install torch_geometric torch-scatter torch-sparse torch-cluster torch-spline-conv
 
 
 # ユーザーをjovyanに戻す
